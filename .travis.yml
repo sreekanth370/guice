@@ -12,6 +12,7 @@ jdk:
   - openjdk11
   - openjdk8
 packages:
+  - openjdk-8-source
   - maven
 before_install:
   - if [ "$LABEL" == "docs" ]; then wget --no-check-certificate "https://www.apache.org/dist/ant/binaries/apache-ant-$ANT-bin.tar.gz";  fi
