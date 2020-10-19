@@ -2,8 +2,9 @@ language: java
 arch:
   - amd64
   - ppc64le
+    packages:
+    - maven
 sudo: false
-
 cache:
   directories:
     - $HOME/.m2
@@ -11,9 +12,6 @@ cache:
 jdk:
   - openjdk11
   - openjdk8
-packages:
-  - openjdk-8-source
-  - maven
 before_install:
   - if [ "$LABEL" == "docs" ]; then wget --no-check-certificate "https://www.apache.org/dist/ant/binaries/apache-ant-$ANT-bin.tar.gz";  fi
   - if [ "$LABEL" == "docs" ]; then tar -xzvf "apache-ant-$ANT-bin.tar.gz"; fi
